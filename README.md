@@ -1,8 +1,8 @@
-### AE4311_Assignment
+# AE4311_Assignment
 
 ## Fault Tolerant Flight Control using Model and Sensor based Approaches
 
-# Problem statements:
+### Problem statements:
 
 This assignment is about Fault Tolerant Flight Control (FTFC) using two nonlinear adaptive control approaches: Adaptive Nonlinear Dynamic Inversion (ANDI) and Incremental Nonlinear
 Dynamic Inversion (INDI). ANDI is an indirect model based control approach which involves aircraft online model identification, using the two-step approach learnt in the course on System
