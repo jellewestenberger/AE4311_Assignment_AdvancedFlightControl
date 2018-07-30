@@ -56,8 +56,8 @@ disp(' ');
 end
 
 gear_params;
-%% Initial values for LSQ aerodynamic parameter estimation
-%Symmetric 
+
+%Symmetric initial values for 
 Pcov_X=10000*eye(5); %inital covariance matrix for CX estimation
 p_X=0.1*ones(5,1);
 
@@ -71,13 +71,7 @@ p_m=0.1*ones(4,1);
 Pcov_Y=10000*eye(6);
 p_Y=0.1*ones(6,1);
 
-Pcov_l=10000*eye(6);
-p_l=0.1*ones(6,1);
+P
 
-Pcov_n=10000*eye(6);
-p_n=0.1*ones(6,1);
-
-
-%%
 
 
