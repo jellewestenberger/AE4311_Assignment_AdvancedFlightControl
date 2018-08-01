@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.654"
+    ComputedModelVersion    "1.658"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -54,7 +54,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-7.0, 0.0, 974.0, 1057.0]
+      Location		      [-8.0, -8.0, 1936.0, 1066.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -88,9 +88,9 @@ Model {
 	  IsActive		  [1]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "2793"
-	  Extents		  [920.0, 873.0]
-	  ZoomFactor		  [1.75]
-	  Offset		  [192.14138625789263, 369.14671729549991]
+	  Extents		  [1882.0, 882.0]
+	  ZoomFactor		  [1.5]
+	  Offset		  [265.87086789759388, 236.11732982014573]
 	}
 	Object {
 	  $ObjectID		  7
@@ -114,14 +114,14 @@ Model {
 	UserData		""
 	Floating		[0]
 	DockPosition		"Right"
-	Width			[115]
-	Height			[15]
+	Width			[640]
+	Height			[480]
       }
       WindowState	      "AAAA/wAAAAD9AAAAAgAAAAAAAAC9AAAB+PwCAAAAA/sAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAA"
       "AAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0Ac"
       "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABjAP///wAAAAEAAAAAAAAAAPwCA"
       "AAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZ"
-      "QBjAHQAbwByAAAAAAD/////AAAAKwD///8AAAO+AAADpQAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAP/////wAAAAAA/////wAAAAAAAAAA/"
+      "QBjAHQAbwByAAAAAAD/////AAAAKwD///8AAAeAAAADrgAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAP/////wAAAAAA/////wAAAAAAAAAA/"
       "////wEAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/"
       "////wEAAAB5/////wAAAAAAAAAA/////wEAAADa/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAFT/////wAAAAAAAAAA/"
       "////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAL9/////wAAAAAAAAAA/"
@@ -135,9 +135,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "jelle"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Jul 31 22:16:33 2018"
-  RTWModifiedTimeStamp	  454978598
-  ModelVersionFormat	  "1.%<AutoIncrement:654>"
+  LastModifiedDate	  "Wed Aug 01 10:58:24 2018"
+  RTWModifiedTimeStamp	  455021891
+  ModelVersionFormat	  "1.%<AutoIncrement:658>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "none"
@@ -1372,7 +1372,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "150"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "2895"
+    SIDHighWatermark	    "2903"
     Block {
       BlockType		      Terminator
       Name		      "1"
@@ -46053,7 +46053,7 @@ Model {
 	  ContentPreviewEnabled	  on
 	  System {
 	    Name		    "CX"
-	    Location		    [-7, 0, 967, 1057]
+	    Location		    [-8, -8, 1928, 1058]
 	    Open		    on
 	    PortBlocksUseCompactNotation off
 	    SetDomainSpec	    off
@@ -46068,7 +46068,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "175"
+	    ZoomFactor		    "150"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "y_k"
@@ -46085,18 +46085,6 @@ Model {
 	      ZOrder		      384
 	      Port		      "2"
 	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Abs
-	      Name		      "Abs"
-	      SID		      "2867"
-	      Position		      [1295, 480, 1325, 510]
-	      ZOrder		      399
-	      SaturateOnIntegerOverflow	off
-	      Port {
-		PortNumber		1
-		Name			"absolute diffirence"
-	      }
 	    }
 	    Block {
 	      BlockType		      Demux
@@ -46134,6 +46122,7 @@ Model {
 	      SID		      "2857"
 	      Position		      [335, 612, 430, 648]
 	      ZOrder		      390
+	      Value		      "0.99"
 	      Port {
 		PortNumber		1
 		Name			"lambda"
@@ -46551,155 +46540,6 @@ Model {
 	      InitialCondition	      "y_X_est_old"
 	    }
 	    Block {
-	      BlockType		      SubSystem
-	      Name		      "Slider"
-	      SID		      "2859"
-	      Ports		      []
-	      Position		      [95, 609, 295, 699]
-	      ZOrder		      391
-	      ShowName		      off
-	      DialogController	      "hmiCreateDDGDialog"
-	      DialogControllerArgs    "DataTag0"
-	      RequestExecContextInheritance off
-	      MaskHideContents	      on
-	      ContentPreviewEnabled   on
-	      IsWebBlock	      on
-	      Object {
-		$PropName		"MaskObject"
-		$ObjectID		38
-		$ClassName		"Simulink.Mask"
-		Type			"MWDashboardBlock"
-		Description		"SimulinkHMI:dialogs:SliderDialogDesc"
-		Help			"helpview([docroot '/mapfiles/simulink.map'], 'hmi_slider')"
-		Display			"if strcmp(get_param(bdroot(gcb),'BlockDiagramType'), 'library')\n    image([(matlabroot) '/toolbox/simuli"
-		"nk/hmi/icons/Slider.png']);\nend"
-		IconFrame		"off"
-		RunInitForIconRedraw	"off"
-		Array {
-		  Type			  "Simulink.MaskParameter"
-		  Dimension		  5
-		  Object {
-		    $ObjectID		    39
-		    Type		    "edit"
-		    Name		    "webBlockId"
-		    Prompt		    "WebBlock Id"
-		    Value		    "cb177e10-0a58-4098-84c2-e2471a959911"
-		    Evaluate		    "off"
-		    Tunable		    "off"
-		  }
-		  Object {
-		    $ObjectID		    40
-		    Type		    "edit"
-		    Name		    "webBlockType"
-		    Prompt		    "WebBlock Type"
-		    Value		    "slider"
-		    Evaluate		    "off"
-		    Tunable		    "off"
-		    Internal		    "on"
-		    ReadOnly		    "on"
-		    Enabled		    "off"
-		    Visible		    "off"
-		  }
-		  Object {
-		    $ObjectID		    41
-		    Type		    "checkbox"
-		    Name		    "ShowInLibBrowser"
-		    Prompt		    ""
-		    Value		    "on"
-		    Evaluate		    "off"
-		    Tunable		    "off"
-		    Internal		    "on"
-		    ReadOnly		    "on"
-		    Enabled		    "off"
-		    Visible		    "off"
-		  }
-		  Object {
-		    $ObjectID		    42
-		    Type		    "checkbox"
-		    Name		    "ShowInitialText"
-		    Prompt		    ""
-		    Value		    "on"
-		    Evaluate		    "off"
-		    Tunable		    "off"
-		    Internal		    "on"
-		    Visible		    "off"
-		  }
-		  Object {
-		    $ObjectID		    43
-		    Type		    "edit"
-		    Name		    "HMISrcModelName"
-		    Prompt		    "Source Model"
-		    Value		    "Citation"
-		    Evaluate		    "off"
-		    Tunable		    "off"
-		    NeverSave		    "on"
-		    Internal		    "on"
-		    Visible		    "off"
-		  }
-		  PropName		  "Parameters"
-		}
-		Object {
-		  $PropName		  "DialogControls"
-		  $ObjectID		  44
-		  $ClassName		  "Simulink.dialog.Group"
-		  Prompt		  "Simulink:studio:ToolBarParametersMenu"
-		  Array {
-		    Type		    "Simulink.dialog.parameter.Control"
-		    Dimension		    5
-		    Object {
-		    $ObjectID		    45
-		    $ClassName		    "Simulink.dialog.parameter.Edit"
-		    PromptLocation	    "left"
-		    Name		    "webBlockId"
-		    }
-		    Object {
-		    $ObjectID		    46
-		    $ClassName		    "Simulink.dialog.parameter.Edit"
-		    PromptLocation	    "left"
-		    Name		    "webBlockType"
-		    }
-		    Object {
-		    $ObjectID		    47
-		    $ClassName		    "Simulink.dialog.parameter.CheckBox"
-		    Name		    "ShowInLibBrowser"
-		    }
-		    Object {
-		    $ObjectID		    48
-		    $ClassName		    "Simulink.dialog.parameter.CheckBox"
-		    Name		    "ShowInitialText"
-		    }
-		    Object {
-		    $ObjectID		    49
-		    $ClassName		    "Simulink.dialog.parameter.Edit"
-		    PromptLocation	    "left"
-		    Name		    "HMISrcModelName"
-		    }
-		    PropName		    "DialogControls"
-		  }
-		  Name			  "ParameterGroupVar"
-		}
-	      }
-	      System {
-		Name			"Slider"
-		Location		[-1639, 178, -956, 660]
-		Open			off
-		PortBlocksUseCompactNotation off
-		SetDomainSpec		off
-		DomainSpecType		"Deduce"
-		ModelBrowserVisibility	off
-		ModelBrowserWidth	200
-		ScreenColor		"white"
-		PaperOrientation	"landscape"
-		PaperPositionMode	"auto"
-		PaperType		"usletter"
-		PaperUnits		"inches"
-		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
-		TiledPageScale		1
-		ShowPageBoundaries	off
-		ZoomFactor		"100"
-	      }
-	    }
-	    Block {
 	      BlockType		      Sum
 	      Name		      "Sum"
 	      SID		      "2866"
@@ -46712,6 +46552,24 @@ Model {
 	      InputSameDT	      off
 	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
 	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum1"
+	      SID		      "2898"
+	      Ports		      [2, 1]
+	      Position		      [1050, 380, 1070, 400]
+	      ZOrder		      402
+	      ShowName		      off
+	      IconShape		      "round"
+	      Inputs		      "|+-"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	      Port {
+		PortNumber		1
+		Name			"Delta"
+	      }
 	    }
 	    Block {
 	      BlockType		      Terminator
@@ -46744,30 +46602,160 @@ Model {
 	      "Phase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'Color"
 	      "Order',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.39"
 	      "2156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1"
-	      ";1 0.0745098039215686 0.650980392156863]),'SerializedDisplays',{struct('MinYLimReal','0.95227','MaxYLimReal','1"
-	      ".0053','YLabelReal','Amplitude','MinYLimMag','0.95227','MaxYLimMag','1.0053','LegendVisibility','On','XGrid',tr"
-	      "ue,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0"
-	      ".686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.4117647058823"
-	      "53 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 "
-	      "1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','','LinePropertiesCache',{{}},'UserDef"
-	      "inedChannelNames',{{}},'NumLines',1,'LineNames',{{'lambda'}},'ShowContent',true,'Placement',1),struct('MinYLimR"
-	      "eal','-0.01761','MaxYLimReal','0.15848','YLabelReal','Amplitude','MinYLimMag','0.00000','MaxYLimMag','0.41925',"
-	      "'LegendVisibility','On','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.6"
-	      "86274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.6"
-	      "23529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0."
-	      "717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','','"
-	      "LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',1,'LineNames',{{'absolute diffirence'}},'Sh"
-	      "owContent',true,'Placement',2),struct('MinYLimReal','-0.2994','MaxYLimReal','0.26346','YLabelReal','Amplitude',"
-	      "'MinYLimMag','0.00000','MaxYLimMag','0.41925','LegendVisibility','On','XGrid',true,'YGrid',true,'PlotMagPhase',"
-	      "false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',"
-	      "[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862"
-	      "745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.07"
-	      "45098039215686 0.650980392156863],'Title','','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLine"
-	      "s',2,'LineNames',{{'CX_estimated','CX_measured'}},'ShowContent',true,'Placement',3)},'DisplayContentCache',[]),"
-	      "extmgr.Configuration('Tools','Plot Navigation',true,'OnceAtStop',false),extmgr.Configuration('Tools','Measureme"
-	      "nts',true,'Version','2018a')),'Version','2018a','Position',[-1919 31 1920 973])"
+	      ";1 0.0745098039215686 0.650980392156863]),'SerializedDisplays',{struct('MinYLimReal','0.89','MaxYLimReal','1.09"
+	      "','YLabelReal','Amplitude','MinYLimMag','0.89','MaxYLimMag','1.09','LegendVisibility','On','XGrid',true,'YGrid'"
+	      ",true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509"
+	      "803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078"
+	      "431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.058823"
+	      "5294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','','LinePropertiesCache',{{}},'UserDefinedChanne"
+	      "lNames',{{}},'NumLines',1,'LineNames',{{'lambda'}},'ShowContent',true,'Placement',1),struct('MinYLimReal','-0.0"
+	      "0076','MaxYLimReal','0.00035','YLabelReal','Amplitude','MinYLimMag','0.00000','MaxYLimMag','0.41925','LegendVis"
+	      "ibility','On','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.68627450980"
+	      "3922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.62352941176"
+	      "4706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.7176470588"
+	      "23529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','','LineProper"
+	      "tiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',1,'LineNames',{{'Sum'}},'ShowContent',true,'Placement"
+	      "',2),struct('MinYLimReal','-0.01374','MaxYLimReal','0.00365','YLabelReal','Amplitude','MinYLimMag','0.00000','M"
+	      "axYLimMag','0.41925','LegendVisibility','On','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0]"
+	      ",'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0"
+	      ".0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 "
+	      "0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.65098039"
+	      "2156863],'Title','','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',2,'LineNames',{{'CX_es"
+	      "timated','CX_measured'}},'ShowContent',true,'Placement',3)},'DisplayContentCache',[]),extmgr.Configuration('Too"
+	      "ls','Plot Navigation',true,'OnceAtStop',false,'AutoscaleMode','Auto'),extmgr.Configuration('Tools','Measurement"
+	      "s',true,'Version','2018a')),'Version','2018a','Position',[-1919 31 1920 973],'VisibleAtModelOpen','on')"
 	      NumInputPorts	      "4"
 	      Floating		      off
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "autocorrelation"
+	      SID		      "2901"
+	      Ports		      [2, 1]
+	      Position		      [1270, 354, 1340, 401]
+	      ZOrder		      405
+	      ErrorFcn		      "Stateflow.Translate.translate"
+	      PermitHierarchicalResolution "ExplicitOnly"
+	      TreatAsAtomicUnit	      on
+	      RequestExecContextInheritance off
+	      SFBlockType	      "MATLAB Function"
+	      ContentPreviewEnabled   on
+	      System {
+		Name			"autocorrelation"
+		Location		[223, 338, 826, 833]
+		Open			off
+		PortBlocksUseCompactNotation off
+		SetDomainSpec		off
+		DomainSpecType		"Deduce"
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		SIDHighWatermark	"22"
+		Block {
+		  BlockType		  Inport
+		  Name			  "delta"
+		  SID			  "2901::1"
+		  Position		  [20, 101, 40, 119]
+		  ZOrder		  -1
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "kgap"
+		  SID			  "2901::22"
+		  Position		  [20, 136, 40, 154]
+		  ZOrder		  13
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  " Demux "
+		  SID			  "2901::20"
+		  Ports			  [1, 1]
+		  Position		  [270, 230, 320, 270]
+		  ZOrder		  11
+		  Outputs		  "1"
+		}
+		Block {
+		  BlockType		  S-Function
+		  Name			  " SFunction "
+		  SID			  "2901::19"
+		  Tag			  "Stateflow S-Function Citation 8"
+		  Ports			  [2, 2]
+		  Position		  [180, 100, 230, 160]
+		  ZOrder		  10
+		  FunctionName		  "sf_sfun"
+		  PortCounts		  "[2 2]"
+		  SFunctionDeploymentMode off
+		  EnableBusSupport	  on
+		  SFcnIsStateOwnerBlock	  off
+		  Port {
+		    PortNumber		    2
+		    Name		    "PI_kgap"
+		  }
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  " Terminator "
+		  SID			  "2901::21"
+		  Position		  [460, 241, 480, 259]
+		  ZOrder		  12
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "PI_kgap"
+		  SID			  "2901::5"
+		  Position		  [460, 101, 480, 119]
+		  ZOrder		  -5
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  ZOrder		  9
+		  SrcBlock		  "delta"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  10
+		  SrcBlock		  "kgap"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  2
+		}
+		Line {
+		  Name			  "PI_kgap"
+		  ZOrder		  11
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  2
+		  DstBlock		  "PI_kgap"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  12
+		  SrcBlock		  " Demux "
+		  SrcPort		  1
+		  DstBlock		  " Terminator "
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  13
+		  SrcBlock		  " SFunction "
+		  SrcPort		  1
+		  DstBlock		  " Demux "
+		  DstPort		  1
+		}
+	      }
 	    }
 	    Line {
 	      ZOrder		      669
@@ -46816,9 +46804,18 @@ Model {
 	      Points		      [26, 0]
 	      Branch {
 		ZOrder			698
-		Points			[0, 220]
-		DstBlock		"Demux1"
-		DstPort			1
+		Points			[0, 220; 184, 0]
+		Branch {
+		  ZOrder		  730
+		  Points		  [0, -290]
+		  DstBlock		  "Sum1"
+		  DstPort		  1
+		}
+		Branch {
+		  ZOrder		  729
+		  DstBlock		  "Demux1"
+		  DstPort		  1
+		}
 	      }
 	      Branch {
 		ZOrder			695
@@ -46842,9 +46839,18 @@ Model {
 	      Points		      [59, 0]
 	      Branch {
 		ZOrder			697
-		Points			[0, 120]
-		DstBlock		"Demux"
-		DstPort			1
+		Points			[0, 120; 195, 0]
+		Branch {
+		  ZOrder		  732
+		  Points		  [0, -142; 121, 0]
+		  DstBlock		  "Sum1"
+		  DstPort		  2
+		}
+		Branch {
+		  ZOrder		  731
+		  DstBlock		  "Demux"
+		  DstPort		  1
+		}
 	      }
 	      Branch {
 		ZOrder			693
@@ -46975,22 +46981,20 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      711
+	      ZOrder		      728
 	      SrcBlock		      "Sum"
 	      SrcPort		      1
-	      Points		      [9, 0; 0, 15]
-	      DstBlock		      "Abs"
-	      DstPort		      1
-	    }
-	    Line {
-	      Name		      "absolute diffirence"
-	      ZOrder		      716
-	      Labels		      [2, 1]
-	      SrcBlock		      "Abs"
-	      SrcPort		      1
-	      Points		      [9, 0; 0, 67; -43, 0; 0, 63]
+	      Points		      [75, 0; 0, 145]
 	      DstBlock		      "Time\nScope"
 	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "Delta"
+	      ZOrder		      738
+	      Labels		      [1, 1]
+	      SrcBlock		      "Sum1"
+	      SrcPort		      1
+	      Points		      [155, 0; 0, 17]
 	    }
 	    Annotation {
 	      SID		      "2858"
@@ -46999,6 +47003,7 @@ Model {
 	      InternalMargins	      [0, 0, 0, 0]
 	      HorizontalAlignment     "left"
 	      VerticalAlignment	      "top"
+	      ZOrder		      -1
 	    }
 	  }
 	}
@@ -47013,7 +47018,7 @@ Model {
 	  ContentPreviewEnabled	  on
 	  System {
 	    Name		    "CY"
-	    Location		    [-8, -8, 1928, 1058]
+	    Location		    [-7, 0, 967, 1057]
 	    Open		    off
 	    PortBlocksUseCompactNotation off
 	    SetDomainSpec	    off
@@ -47520,14 +47525,14 @@ Model {
 	      ZOrder		      391
 	      ShowName		      off
 	      DialogController	      "hmiCreateDDGDialog"
-	      DialogControllerArgs    "DataTag1"
+	      DialogControllerArgs    "DataTag0"
 	      RequestExecContextInheritance off
 	      MaskHideContents	      on
 	      ContentPreviewEnabled   on
 	      IsWebBlock	      on
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		50
+		$ObjectID		38
 		$ClassName		"Simulink.Mask"
 		Type			"MWDashboardBlock"
 		Description		"SimulinkHMI:dialogs:SliderDialogDesc"
@@ -47540,7 +47545,7 @@ Model {
 		  Type			  "Simulink.MaskParameter"
 		  Dimension		  5
 		  Object {
-		    $ObjectID		    51
+		    $ObjectID		    39
 		    Type		    "edit"
 		    Name		    "webBlockId"
 		    Prompt		    "WebBlock Id"
@@ -47549,7 +47554,7 @@ Model {
 		    Tunable		    "off"
 		  }
 		  Object {
-		    $ObjectID		    52
+		    $ObjectID		    40
 		    Type		    "edit"
 		    Name		    "webBlockType"
 		    Prompt		    "WebBlock Type"
@@ -47562,7 +47567,7 @@ Model {
 		    Visible		    "off"
 		  }
 		  Object {
-		    $ObjectID		    53
+		    $ObjectID		    41
 		    Type		    "checkbox"
 		    Name		    "ShowInLibBrowser"
 		    Prompt		    ""
@@ -47575,7 +47580,7 @@ Model {
 		    Visible		    "off"
 		  }
 		  Object {
-		    $ObjectID		    54
+		    $ObjectID		    42
 		    Type		    "checkbox"
 		    Name		    "ShowInitialText"
 		    Prompt		    ""
@@ -47586,7 +47591,7 @@ Model {
 		    Visible		    "off"
 		  }
 		  Object {
-		    $ObjectID		    55
+		    $ObjectID		    43
 		    Type		    "edit"
 		    Name		    "HMISrcModelName"
 		    Prompt		    "Source Model"
@@ -47601,36 +47606,36 @@ Model {
 		}
 		Object {
 		  $PropName		  "DialogControls"
-		  $ObjectID		  56
+		  $ObjectID		  44
 		  $ClassName		  "Simulink.dialog.Group"
 		  Prompt		  "Simulink:studio:ToolBarParametersMenu"
 		  Array {
 		    Type		    "Simulink.dialog.parameter.Control"
 		    Dimension		    5
 		    Object {
-		    $ObjectID		    57
+		    $ObjectID		    45
 		    $ClassName		    "Simulink.dialog.parameter.Edit"
 		    PromptLocation	    "left"
 		    Name		    "webBlockId"
 		    }
 		    Object {
-		    $ObjectID		    58
+		    $ObjectID		    46
 		    $ClassName		    "Simulink.dialog.parameter.Edit"
 		    PromptLocation	    "left"
 		    Name		    "webBlockType"
 		    }
 		    Object {
-		    $ObjectID		    59
+		    $ObjectID		    47
 		    $ClassName		    "Simulink.dialog.parameter.CheckBox"
 		    Name		    "ShowInLibBrowser"
 		    }
 		    Object {
-		    $ObjectID		    60
+		    $ObjectID		    48
 		    $ClassName		    "Simulink.dialog.parameter.CheckBox"
 		    Name		    "ShowInitialText"
 		    }
 		    Object {
-		    $ObjectID		    61
+		    $ObjectID		    49
 		    $ClassName		    "Simulink.dialog.parameter.Edit"
 		    PromptLocation	    "left"
 		    Name		    "HMISrcModelName"
@@ -50704,10 +50709,6 @@ Model {
 	  InternalMargins	  [0, 0, 0, 0]
 	  BackgroundColor	  "lightBlue"
 	  ZOrder		  -1
-	  FontName		  "Helvetica"
-	  FontSize		  10
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
 	}
 	Annotation {
 	  SID			  "2724"
@@ -50716,10 +50717,6 @@ Model {
 	  InternalMargins	  [0, 0, 0, 0]
 	  BackgroundColor	  "lightBlue"
 	  ZOrder		  1
-	  FontName		  "Helvetica"
-	  FontSize		  10
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
 	}
 	Annotation {
 	  SID			  "2725"
@@ -50728,10 +50725,6 @@ Model {
 	  InternalMargins	  [0, 0, 0, 0]
 	  BackgroundColor	  "lightBlue"
 	  ZOrder		  2
-	  FontName		  "Helvetica"
-	  FontSize		  10
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
 	}
 	Annotation {
 	  SID			  "2729"
@@ -50740,10 +50733,6 @@ Model {
 	  InternalMargins	  [0, 0, 0, 0]
 	  BackgroundColor	  "lightBlue"
 	  ZOrder		  6
-	  FontName		  "Helvetica"
-	  FontSize		  10
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
 	}
 	Annotation {
 	  SID			  "2730"
@@ -50752,10 +50741,6 @@ Model {
 	  InternalMargins	  [0, 0, 0, 0]
 	  BackgroundColor	  "lightBlue"
 	  ZOrder		  7
-	  FontName		  "Helvetica"
-	  FontSize		  10
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
 	}
 	Annotation {
 	  SID			  "2732"
@@ -50764,10 +50749,6 @@ Model {
 	  InternalMargins	  [0, 0, 0, 0]
 	  BackgroundColor	  "lightBlue"
 	  ZOrder		  9
-	  FontName		  "Helvetica"
-	  FontSize		  10
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
 	}
 	Annotation {
 	  SID			  "2796"
@@ -50776,10 +50757,6 @@ Model {
 	  InternalMargins	  [0, 0, 0, 0]
 	  BackgroundColor	  "lightBlue"
 	  ZOrder		  -11
-	  FontName		  "Helvetica"
-	  FontSize		  10
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
 	}
 	Annotation {
 	  SID			  "2797"
@@ -50788,10 +50765,6 @@ Model {
 	  InternalMargins	  [0, 0, 0, 0]
 	  BackgroundColor	  "lightBlue"
 	  ZOrder		  -12
-	  FontName		  "Helvetica"
-	  FontSize		  10
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
 	}
 	Annotation {
 	  SID			  "2798"
@@ -50800,10 +50773,6 @@ Model {
 	  InternalMargins	  [0, 0, 0, 0]
 	  BackgroundColor	  "lightBlue"
 	  ZOrder		  -13
-	  FontName		  "Helvetica"
-	  FontSize		  10
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
 	}
 	Annotation {
 	  SID			  "2799"
@@ -50812,10 +50781,6 @@ Model {
 	  InternalMargins	  [0, 0, 0, 0]
 	  BackgroundColor	  "lightBlue"
 	  ZOrder		  -14
-	  FontName		  "Helvetica"
-	  FontSize		  10
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
 	}
 	Annotation {
 	  SID			  "2800"
@@ -50824,10 +50789,6 @@ Model {
 	  InternalMargins	  [0, 0, 0, 0]
 	  BackgroundColor	  "lightBlue"
 	  ZOrder		  -15
-	  FontName		  "Helvetica"
-	  FontSize		  10
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
 	}
 	Annotation {
 	  SID			  "2801"
@@ -50836,10 +50797,6 @@ Model {
 	  InternalMargins	  [0, 0, 0, 0]
 	  BackgroundColor	  "lightBlue"
 	  ZOrder		  -16
-	  FontName		  "Helvetica"
-	  FontSize		  10
-	  FontWeight		  "normal"
-	  FontAngle		  "normal"
 	}
       }
     }
@@ -51225,14 +51182,9 @@ Model {
   }
 }
 MatData {
-  NumRecords		  2
+  NumRecords		  1
   DataRecord {
     Tag			    DataTag0
-    Data		    "  %)30     .    :     8    (     0         %    \"     $    !     0         .    .     8    (    !     "
-    "     %    \"     $    &     0         0    !@   %-L:61E<@  "
-  }
-  DataRecord {
-    Tag			    DataTag1
     Data		    "  %)30     .    :     8    (     0         %    \"     $    !     0         .    .     8    (    !     "
     "     %    \"     $    &     0         0    !@   %-L:61E<@  "
   }
@@ -51249,7 +51201,7 @@ Stateflow {
     created		    "28-Jul-2018 16:33:14"
     isLibrary		    0
     sfVersion		    80000014
-    firstTarget		    117
+    firstTarget		    125
   }
   chart {
     id			    2
@@ -51843,8 +51795,6 @@ Stateflow {
     screen		    [1 1 3600 1200 1.180555555555556]
     treeNode		    [0 30 0 0]
     viewObj		    29
-    subviewS {
-    }
     ssIdHighWaterMark	    20
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -52299,8 +52249,6 @@ Stateflow {
     screen		    [1 1 3600 1200 1.180555555555556]
     treeNode		    [0 50 0 0]
     viewObj		    49
-    subviewS {
-    }
     ssIdHighWaterMark	    17
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -52678,8 +52626,6 @@ Stateflow {
     screen		    [1 1 3600 1200 1.180555555555556]
     treeNode		    [0 67 0 0]
     viewObj		    66
-    subviewS {
-    }
     ssIdHighWaterMark	    17
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -53057,8 +53003,6 @@ Stateflow {
     screen		    [1 1 3600 1200 1.180555555555556]
     treeNode		    [0 84 0 0]
     viewObj		    83
-    subviewS {
-    }
     ssIdHighWaterMark	    17
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -53436,8 +53380,6 @@ Stateflow {
     screen		    [1 1 3600 1200 1.180555555555556]
     treeNode		    [0 101 0 0]
     viewObj		    100
-    subviewS {
-    }
     ssIdHighWaterMark	    17
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -53806,8 +53748,160 @@ Stateflow {
     name		    "Recursive Least Squares/Cln/MATLAB Function"
     chart		    100
   }
-  target {
+  chart {
     id			    117
+    machine		    1
+    name		    "Recursive Least Squares/CX/autocorrelation"
+    windowPosition	    [422 539.941 189 413]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 3600 1200 1.180555555555556]
+    treeNode		    [0 118 0 0]
+    viewObj		    117
+    visible		    1
+    subviewS {
+    }
+    ssIdHighWaterMark	    6
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    chartFileNumber	    8
+    disableImplicitCasting  1
+    eml {
+      name		      "fcn"
+    }
+    firstData		    119
+    firstTransition	    123
+    firstJunction	    122
+  }
+  state {
+    id			    118
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    117
+    treeNode		    [117 0 0 0]
+    superState		    SUBCHART
+    subviewer		    117
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function PI_kgap = fcn(delta,kgap)\nPI_kgap=0;\nfor t=1:(length(delta)-kgap)\n    PI_kgap=PI_kgap"
+      "+(delta(t)*delta(t+kgap));\nend\nPI_kgap=PI_kgap/length(delta);\n\nend"
+      editorLayout	      "100 M4x1[10 5 700 500]"
+    }
+  }
+  data {
+    id			    119
+    ssIdNumber		    4
+    name		    "delta"
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [117 0 120]
+  }
+  data {
+    id			    120
+    ssIdNumber		    5
+    name		    "PI_kgap"
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [117 119 121]
+  }
+  data {
+    id			    121
+    ssIdNumber		    6
+    name		    "kgap"
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+      unit {
+	name			"inherit"
+      }
+    }
+    dataType		    "Inherit: Same as Simulink"
+    linkNode		    [117 120 0]
+  }
+  junction {
+    id			    122
+    position		    [23.5747 49.5747 7]
+    chart		    117
+    subviewer		    117
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+    linkNode		    [117 0 0]
+  }
+  transition {
+    id			    123
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [28.125 13.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      122
+      intersection	      [1 0 -1 0 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    117
+    dataLimits		    [21.175 25.975 14.625 42.575]
+    subviewer		    117
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    2
+    linkNode		    [117 0 0]
+  }
+  instance {
+    id			    124
+    machine		    1
+    name		    "Recursive Least Squares/CX/autocorrelation"
+    chart		    117
+  }
+  target {
+    id			    125
     machine		    1
     name		    "sfun"
     description		    "Default Simulink S-Function Target."

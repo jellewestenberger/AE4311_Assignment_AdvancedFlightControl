@@ -57,48 +57,48 @@ end
 
 gear_params;
 
-forget_windowSize=20;
+sample_size=50;
 
 %% Initial values for LSQ aerodynamic parameter estimation
 %Symmetric 
 Pcov_X=10000*eye(5); %inital covariance matrix for CX estimation
-p_X=0.1*ones(5,forget_windowSize);
-y_X=zeros(1,forget_windowSize);
+p_X=0.1*ones(5,sample_size);
+y_X=zeros(1,sample_size);
 y_X_est_old=zeros(size(y_X));
-h_X_old=zeros(5,forget_windowSize);
+h_X_old=zeros(5,sample_size);
 
 
 Pcov_Z=10000*eye(4); %inital covariance matrix for CZ estimation
-p_Z=0.1*ones(4,forget_windowSize);
-y_Z=zeros(1,forget_windowSize);
+p_Z=0.1*ones(4,sample_size);
+y_Z=zeros(1,sample_size);
 y_Z_est_old=zeros(size(y_Z));
-h_Z_old=zeros(4,forget_windowSize);
+h_Z_old=zeros(4,sample_size);
 
 
 Pcov_m=10000*eye(4); %inital covariance matrix for Cm estimation
-p_m=0.1*ones(4,forget_windowSize);
-y_m=zeros(1,forget_windowSize);
+p_m=0.1*ones(4,sample_size);
+y_m=zeros(1,sample_size);
 y_m_est_old=zeros(size(y_m));
-h_m_old=zeros(4,forget_windowSize);
+h_m_old=zeros(4,sample_size);
 
 %Assymetric
 Pcov_Y=10000*eye(6);
-p_Y=0.1*ones(6,forget_windowSize);
-y_Y=zeros(1,forget_windowSize);
+p_Y=0.1*ones(6,sample_size);
+y_Y=zeros(1,sample_size);
 y_Y_est_old=zeros(size(y_Y));
-h_Y_old=zeros(6,forget_windowSize);
+h_Y_old=zeros(6,sample_size);
 
 Pcov_l=10000*eye(6);
-p_l=0.1*ones(6,forget_windowSize);
-y_l=zeros(1,forget_windowSize);
+p_l=0.1*ones(6,sample_size);
+y_l=zeros(1,sample_size);
 y_l_est_old=zeros(size(y_l));
-h_l_old=zeros(6,forget_windowSize);
+h_l_old=zeros(6,sample_size);
 
 Pcov_n=10000*eye(6);
-p_n=0.1*ones(6,forget_windowSize);
-y_n=zeros(1,forget_windowSize);
+p_n=0.1*ones(6,sample_size);
+y_n=zeros(1,sample_size);
 y_n_est_old=zeros(size(y_n));
-h_n_old=zeros(6,forget_windowSize);
+h_n_old=zeros(6,sample_size);
 
 
 %%
