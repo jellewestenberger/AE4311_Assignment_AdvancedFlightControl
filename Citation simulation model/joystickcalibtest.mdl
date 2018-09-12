@@ -30,7 +30,7 @@ Model {
       UnitExpr		      "inherit"
     }
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.36"
+    ComputedModelVersion    "1.37"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -86,7 +86,7 @@ Model {
 	DockPosition		"Left"
 	Width			[50]
 	Height			[50]
-	Filter			[8]
+	Filter			[9]
       }
       Object {
 	$PropName		"ExplorerBarInfo"
@@ -103,7 +103,7 @@ Model {
 	LoadSaveID		"0"
 	Extents			[1882.0, 885.0]
 	ZoomFactor		[1.25]
-	Offset			[-183.95790583773547, -50.904818222695894]
+	Offset			[-336.0887077015102, -63.600971695223052]
       }
       Object {
 	$PropName		"DockComponentsInfo"
@@ -137,9 +137,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "jelle"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri Jul 27 20:58:00 2018"
-  RTWModifiedTimeStamp	  454624500
-  ModelVersionFormat	  "1.%<AutoIncrement:36>"
+  LastModifiedDate	  "Wed Sep 12 12:23:03 2018"
+  RTWModifiedTimeStamp	  458652651
+  ModelVersionFormat	  "1.%<AutoIncrement:37>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "none"
@@ -1353,6 +1353,7 @@ Model {
 	  InternalMargins	  [0, 0, 0, 0]
 	  HorizontalAlignment	  "left"
 	  VerticalAlignment	  "top"
+	  ZOrder		  -1
 	}
 	Annotation {
 	  SID			  "74"
@@ -1361,6 +1362,7 @@ Model {
 	  InternalMargins	  [0, 0, 0, 0]
 	  HorizontalAlignment	  "left"
 	  VerticalAlignment	  "top"
+	  ZOrder		  -2
 	}
       }
     }
@@ -1938,12 +1940,11 @@ Model {
       BlockType		      Demux
       Name		      "Demux1"
       SID		      "8"
-      Ports		      [1, 5]
+      Ports		      [1, 4]
       Position		      [155, 33, 160, 357]
       ZOrder		      -8
       BackgroundColor	      "black"
       ShowName		      off
-      Outputs		      "5"
     }
     Block {
       BlockType		      Display
@@ -2058,7 +2059,7 @@ Model {
       Name		      "Joystick Input"
       SID		      "24"
       Ports		      [0, 3]
-      Position		      [-15, 183, 65, 267]
+      Position		      [-190, 213, -110, 297]
       ZOrder		      -24
       LibraryVersion	      "1.38"
       SourceBlock	      "vrlib/Joystick Input"
@@ -2134,16 +2135,9 @@ Model {
     }
     Block {
       BlockType		      Terminator
-      Name		      "Terminator"
-      SID		      "114"
-      Position		      [170, 185, 190, 205]
-      ZOrder		      38
-    }
-    Block {
-      BlockType		      Terminator
       Name		      "Terminator3"
       SID		      "29"
-      Position		      [115, 215, 135, 235]
+      Position		      [110, 245, 130, 265]
       ZOrder		      -29
       ShowName		      off
     }
@@ -2151,7 +2145,7 @@ Model {
       BlockType		      Terminator
       Name		      "Terminator4"
       SID		      "30"
-      Position		      [115, 245, 135, 265]
+      Position		      [115, 285, 135, 305]
       ZOrder		      -30
       ShowName		      off
     }
@@ -2194,7 +2188,7 @@ Model {
       ZOrder		      1
       SrcBlock		      "Joystick Input"
       SrcPort		      1
-      Points		      [29, 0]
+      Points		      [204, 0; 0, -30]
       Branch {
 	ZOrder			45
 	Points			[0, -30; -121, 0; 0, -75]
@@ -2218,16 +2212,9 @@ Model {
       ZOrder		      48
       SrcBlock		      "Joystick Input"
       SrcPort		      3
+      Points		      [102, 0; 0, 10]
       DstBlock		      "Terminator4"
       DstPort		      1
-    }
-    Line {
-      ZOrder		      4
-      SrcBlock		      "Demux1"
-      SrcPort		      1
-      Points		      [9, 0; 0, 10]
-      DstBlock		      "Sum"
-      DstPort		      2
     }
     Line {
       ZOrder		      5
@@ -2398,31 +2385,6 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      41
-      Labels		      [1, 0]
-      SrcBlock		      "Demux1"
-      SrcPort		      4
-      Points		      [55, 0; 0, 55]
-      DstBlock		      "Sum3"
-      DstPort		      2
-    }
-    Line {
-      ZOrder		      106
-      SrcBlock		      "Demux1"
-      SrcPort		      2
-      Points		      [22, 0; 0, 105]
-      DstBlock		      "Sum2"
-      DstPort		      2
-    }
-    Line {
-      ZOrder		      89
-      SrcBlock		      "Demux1"
-      SrcPort		      5
-      Points		      [33, 0; 0, -170]
-      DstBlock		      "Sum1"
-      DstPort		      2
-    }
-    Line {
       ZOrder		      93
       SrcBlock		      "Add deadzone\n"
       SrcPort		      1
@@ -2523,11 +2485,34 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      161
+      ZOrder		      182
+      SrcBlock		      "Demux1"
+      SrcPort		      2
+      DstBlock		      "Sum1"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      186
       SrcBlock		      "Demux1"
       SrcPort		      3
-      DstBlock		      "Terminator"
-      DstPort		      1
+      Points		      [12, 0; 0, 72; 48, 0; 0, 8]
+      DstBlock		      "Sum3"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      184
+      SrcBlock		      "Demux1"
+      SrcPort		      1
+      DstBlock		      "Sum"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      185
+      SrcBlock		      "Demux1"
+      SrcPort		      4
+      Points		      [29, 0; 0, -80]
+      DstBlock		      "Sum2"
+      DstPort		      2
     }
     Annotation {
       SID		      "99"
@@ -2538,6 +2523,7 @@ Model {
       FixedWidth	      on
       HorizontalAlignment     "left"
       VerticalAlignment	      "top"
+      ZOrder		      -1
     }
     Annotation {
       SID		      "35"
