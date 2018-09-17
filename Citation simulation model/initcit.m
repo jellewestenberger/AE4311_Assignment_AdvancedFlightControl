@@ -59,6 +59,13 @@ gear_params;
 
 sample_size=50;
 
+%% Build MMI matrix 
+I=[massinit(5),0, -massinit(8);0, massinit(6),0;-massinit(8),0, massinit(7)]; %[Ixx 0 -Ixz; 
+                                                                              %  0  Iyy  0;
+                                                                              % -Ixz 0   Izz ] 
+
+
+
 %% Initial values for LSQ aerodynamic parameter estimation
 %Symmetric 
 Pcov_X=10000*eye(5); %inital covariance matrix for CX estimation
