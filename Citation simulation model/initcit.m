@@ -63,7 +63,9 @@ sample_size=50;
 I=[massinit(5),0, -massinit(8);0, massinit(6),0;-massinit(8),0, massinit(7)]; %[Ixx 0 -Ixz; 
                                                                               %  0  Iyy  0;
                                                                               % -Ixz 0   Izz ] 
+aeroinit=load('aerodat_ini');
 
+aeroinit=aeroinit.data{1}.Values.Data(:,1,1); %initial aerodata for memory block
 
 
 %% Initial values for LSQ aerodynamic parameter estimation
@@ -76,33 +78,33 @@ h_X_old=zeros(5,sample_size);
 
 
 Pcov_Z=10000*eye(4); %inital covariance matrix for CZ estimation
-p_Z=0.1*ones(4,sample_size);
+p_Z=0.2*ones(4,sample_size);
 y_Z=zeros(1,sample_size);
 y_Z_est_old=zeros(size(y_Z));
 h_Z_old=zeros(4,sample_size);
 
 
 Pcov_m=10000*eye(4); %inital covariance matrix for Cm estimation
-p_m=0.1*ones(4,sample_size);
+p_m=0.3*ones(4,sample_size);
 y_m=zeros(1,sample_size);
 y_m_est_old=zeros(size(y_m));
 h_m_old=zeros(4,sample_size);
 
 %Assymetric
 Pcov_Y=10000*eye(6);
-p_Y=0.1*ones(6,sample_size);
+p_Y=0.5*ones(6,sample_size);
 y_Y=zeros(1,sample_size);
 y_Y_est_old=zeros(size(y_Y));
 h_Y_old=zeros(6,sample_size);
 
 Pcov_l=10000*eye(6);
-p_l=0.1*ones(6,sample_size);
+p_l=0.6*ones(6,sample_size);
 y_l=zeros(1,sample_size);
 y_l_est_old=zeros(size(y_l));
 h_l_old=zeros(6,sample_size);
 
 Pcov_n=10000*eye(6);
-p_n=0.1*ones(6,sample_size);
+p_n=0.71*ones(6,sample_size);
 y_n=zeros(1,sample_size);
 y_n_est_old=zeros(size(y_n));
 h_n_old=zeros(6,sample_size);
