@@ -64,6 +64,7 @@ I=[massinit(5),0, -massinit(8);0, massinit(6),0;-massinit(8),0, massinit(7)]; %[
                                                                               %  0  Iyy  0;
 dp_ini=4046; %initial dynamic pressure                                        % -Ixz 0   Izz ] 
 
+%% read in aerodynamic model from earlier run and take the average from 33-100% of the run
 aci=load('coefval.mat');
 coefname={};
 coefvalue={};
