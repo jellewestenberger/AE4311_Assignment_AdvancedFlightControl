@@ -142,8 +142,9 @@ h_n_old=zeros(6,sample_size);
 
 %% Failure monitor
 Clda_thresh=3.410e-2/2;
+deaf_window=300;
 
 %% Load signal data
-inputsim=load('simulation runs/Cl_RLS_run01.mat');
+inputsim=load('simulation runs/Cl_RLS_run02.mat');
 timeend=inputsim.data{1}.Values.Time(end);
-replay=1; %set this to one to enable replay of inputs
+replay=0; %set this to one to enable replay of inputs
