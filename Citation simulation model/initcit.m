@@ -145,8 +145,21 @@ Clda_thresh=3.410e-2/2;
 deaf_window=300;
 
 %% Load signal data
+replay=1;
+if replay
+    sims=dir('simulation runs');
+    
+    for i=1:length(sims)
+        disp(strcat(sims(i,1).name,'(',num2str(i),')'));
+    end
+    sel=13;
+    run=sims(sel).name;
+disp(strcat('Selected: ',run)); 
 % inputsim=load('simulation runs/ClassicRun_failure_short.mat');
+% inputsim=load('simulation runs/ClassicRun_free.mat');
+inputsim=load(strcat('simulation runs/',run));
 % inputsim=load('simulation runs/ClassicRun_Nofailure_short.mat');
-inputsim=load('simulation runs/ClassicRun_Nofailure_short.mat');
-timeend=inputsim.data{1}.Values.Time(end);
-replay=0; %set this to one to enable replay of inputs
+%     inputsim=load('simulation runs/ClassicRun_Nofailure_short.mat');
+    timeend=inputsim.data{1}.Values.Time(end);
+end
+ %set this to one to enable replay of inputs
