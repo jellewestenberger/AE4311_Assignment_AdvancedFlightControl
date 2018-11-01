@@ -14,7 +14,7 @@
 %-----------------------------------------------------------------------------
 %
 % Version : EXPORT (for Analysis), no gear, no wind.
-
+%
 % Load general and Citation data
 load ac_genrl;
 load citdata;
@@ -32,10 +32,11 @@ winddir = 45*(pi/180);
 % * Aerodynamic Ground Effect Model
 % * Landing Gear Model
 
+%% Adjusted by Jelle Westeberger for AE4311 Assignment. ANDI, INDI control
 %hrunway=2.5;
 
 trimdatafile = 'citast.tri';
-
+    
 if not(isempty(trimdatafile))
 load(trimdatafile,'-mat');
 disp(' ');
@@ -64,7 +65,7 @@ I=[massinit(5),0, -massinit(8);0, massinit(6),0;-massinit(8),0, massinit(7)]; %[
                                                                               %  0  Iyy  0;
 dp_ini=4046; %initial dynamic pressure                                        % -Ixz 0   Izz ] 
 
-%% read in aerodynamic model from earlier run and take the average from 33-100% of the run
+%% read in aerodynamic model from earlier run and take the average from 33-100% 
 aci=load('coefval.mat');
 coefname={};
 coefvalue={};
@@ -134,32 +135,43 @@ h_l_old=zeros(6,sample_size);
 Pcov_n=10000*eye(6);
 p_n=[inicoef('Cn0');inicoef('CnB');inicoef('Cnp');inicoef('Cnr')...
     ;inicoef('Cnda');inicoef('Cndr')].*ones(6,sample_size);
-p_n=0.71*ones(6,sample_size);
+% p_n=0.71*ones(6,sample_size);
 y_n=zeros(1,sample_size);
 y_n_est_old=zeros(size(y_n));
 h_n_old=zeros(6,sample_size);
 
 
 %% Failure monitor
-Clda_thresh=3.410e-2/2;
+Clda_thresh=3.410e-2/2; 
+movavg_thresh=2e-6;
 deaf_window=300;
 
-%% Load signal data
-replay=1;
-if replay
+
+
+
+%% This is to re-simulate pre-recorded runs:
+%% Load signal data 
+replay=0;
+% if replay
     sims=dir('simulation runs');
     
-    for i=1:length(sims)
-        disp(strcat(sims(i,1).name,'(',num2str(i),')'));
-    end
-    sel=13;
-    run=sims(sel).name;
+ run='NDIRun_Nofailure_free.mat';
 disp(strcat('Selected: ',run)); 
-% inputsim=load('simulation runs/ClassicRun_failure_short.mat');
-% inputsim=load('simulation runs/ClassicRun_free.mat');
+
 inputsim=load(strcat('simulation runs/',run));
-% inputsim=load('simulation runs/ClassicRun_Nofailure_short.mat');
-%     inputsim=load('simulation runs/ClassicRun_Nofailure_short.mat');
-    timeend=inputsim.data{1}.Values.Time(end);
+
+for i=1:30
+   try
+   if strcmp(inputsim.data{i}.Name,'joystick')
+       joydata=inputsim.data{i};
+       break
+   end
+   catch
+       disp('Joystick data not found')
+       break
+   end
+   
 end
- %set this to one to enable replay of inputs
+    timeend=inputsim.data{1}.Values.Time(end);
+% end
+%  %set this to one to enable replay of inputs
